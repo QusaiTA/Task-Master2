@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id"></item>
+    <item name="textView2" type="id"></item>
+    <item name="imageView" type="id"></item>
+    <item name="button" type="id"></item>
+    <item name="button2" type="id"></item>
+    <item name="textView7" type="id"></item>
+    <item name="settings" type="id"></item>
+    <item name="welcomeMsg" type="id"></item>
+    <item name="taskRecycler" type="id"></item>
+</resources>

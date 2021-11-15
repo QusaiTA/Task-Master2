@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_task">add_task</string>
+    <string name="all_tasks">all_tasks</string>
+    <string name="my_tasks">my_tasks</string>
+    <string name="task_manager">task_manager</string>
+    <string name="settings">settings</string>
+    <string name="do_something">do_something</string>
+    <string name="state">state</string>
+    <string name="task_title">task_title</string>
+    <string name="my_task">my_task</string>
+    <string name="body">/body</string>
+    <string name="tasks_count">tasks_count</string>
+    <string name="save">SAVE</string>
+    <string name="username">username</string>
+    <string name="title">Title :</string>
+    <string name="state1">State :</string>
+    <string name="body1">Body :</string>
+    <string name="state2">state2</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="email1">Email</string>
+    <string name="password2">password</string>
+    <string name="sign_in1">Sign IN</string>
+    <string name="confirm_email">Confirm Email</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="confirm">Confirm</string>
+    <string name="logout">Logout</string>
+    <string name="sign_in">Sign IN</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
