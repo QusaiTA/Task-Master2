@@ -36,13 +36,15 @@ public class TaskDetails extends AppCompatActivity {
         textView3.setText(state);
         
 
-        ImageView myimg=findViewById(R.id.imageViewImage);
-
+//        ImageView myimg=findViewById(R.id.imageViewImage);
+//
         if (intent.getExtras().getString("img") != null) {
             Amplify.Storage.downloadFile(
                     intent.getExtras().getString("img"),
                     new File(getApplicationContext().getFilesDir() + "/" + intent.getExtras().getString("img") + ".jpg"),
                     result -> {
+
+                        ImageView myimg=findViewById(R.id.imageViewImage);
                         Bitmap bitmap = BitmapFactory.decodeFile(result.getFile().getPath());
                         myimg.setImageBitmap(bitmap);
                         Log.i("MyAmplifyApp", "Successfully downloaded: " + result.getFile().getName());
@@ -50,6 +52,22 @@ public class TaskDetails extends AppCompatActivity {
                     error -> Log.e("MyAmplifyApp", "Download Failure", error)
             );
         }
+
+//        String img= intent.getExtras().getString("img");
+////                if (intent.getExtras().getString("img") != null) {
+//                    Amplify.Storage.downloadFile(
+//                            "image",
+//                            new File(getApplicationContext().getFilesDir() + "/download.jpg"),
+//                            result -> {
+//                                ImageView image = findViewById(R.id.imageViewImage);
+//                                intent.getExtras().getString("img");
+//                                image.setImageBitmap(BitmapFactory.decodeFile(result.getFile().getPath()));
+//
+//                                Log.i("MyAmplifyApp", "Successfully downloaded: " + result.getFile());
+//                            },
+//                            error -> Log.e("MyAmplifyApp", "Download Failure", error)
+//                    );
+////                }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
