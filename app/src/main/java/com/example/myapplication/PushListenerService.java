@@ -27,6 +27,8 @@ public class PushListenerService extends FirebaseMessagingService {
     public static final String INTENT_SNS_NOTIFICATION_DATA = "data";
     public static final int NOTIFICATION_ID = 999;
 
+
+
     @Override
     public void onNewToken(String token) {
         super.onNewToken(token);

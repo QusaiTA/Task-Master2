@@ -69,6 +69,8 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.35.0'
     implementation 'com.github.onimur:handle-path-oz:1.0.7'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.amplifyframework:aws-analytics-pinpoint:1.29.0'
+
 
 
 
