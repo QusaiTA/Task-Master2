@@ -117,9 +117,9 @@ public class MainActivity extends AppCompatActivity {
                 ModelQuery.list(com.amplifyframework.datastore.generated.model.Task.class),
                 response -> {
                     for (com.amplifyframework.datastore.generated.model.Task todo : response.getData()) {
-                       com.amplifyframework.datastore.generated.model.Task taskOrg = new Task(todo.getId(),todo.getTitle(),todo.getBody(),todo.getState(),todo.getImg());
+//                       com.amplifyframework.datastore.generated.model.Task taskOrg = new Task(todo.getId(),todo.getTitle(),todo.getBody(),todo.getState(),todo.getImg());
                         Log.i("graph testing", todo.getTitle());
-                        taskList.add(taskOrg);
+                        taskList.add(todo);
                     }
                     handler.sendEmptyMessage(1);
                 },
