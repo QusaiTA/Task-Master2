@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaskDetails">
+    tools:context=".TaskDetails"
+    tools:layout_editor_absoluteX="4dp"
+    tools:layout_editor_absoluteY="-92dp">
 
 
     <TextView
@@ -14,10 +16,10 @@
         android:text="@string/body1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.403" />
+        app:layout_constraintVertical_bias="0.262" />
 
     <TextView
         android:id="@+id/textView10"
@@ -26,10 +28,10 @@
         android:text="@string/state1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.457" />
 
     <TextView
         android:id="@+id/stateFinish"
@@ -38,10 +40,10 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintHorizontal_bias="0.63"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/bodyFinish"
@@ -53,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.308" />
 
     <TextView
         android:id="@+id/titleFinish"
@@ -65,7 +67,7 @@
         app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.185" />
 
     <Toolbar
         android:id="@+id/toolbar"
@@ -87,21 +89,22 @@
         android:text="@string/title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <ImageView
         android:id="@+id/imageViewImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintVertical_bias="0.839"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

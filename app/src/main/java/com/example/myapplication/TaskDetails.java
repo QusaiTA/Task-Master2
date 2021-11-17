@@ -2,8 +2,7 @@ package com.example.myapplication;
 
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,9 +11,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toolbar;
 
-import com.amplifyframework.core.Amplify;
+import com.squareup.picasso.Picasso;
 
-import java.io.File;
 
 public class TaskDetails extends AppCompatActivity {
 
@@ -34,41 +32,12 @@ public class TaskDetails extends AppCompatActivity {
         textView2.setText(body);
         TextView textView3= findViewById(R.id.stateFinish);
         textView3.setText(state);
-        
 
-//        ImageView myimg=findViewById(R.id.imageViewImage);
-//
-        if (intent.getExtras().getString("img") != null) {
-            Amplify.Storage.downloadFile(
-                    intent.getExtras().getString("img"),
-                    new File(getApplicationContext().getFilesDir() + "/" + intent.getExtras().getString("img") + ".jpg"),
-                    result -> {
 
-                        ImageView myimg=findViewById(R.id.imageViewImage);
-                        Bitmap bitmap = BitmapFactory.decodeFile(result.getFile().getPath());
-                        myimg.setImageBitmap(bitmap);
-                        Log.i("MyAmplifyApp", "Successfully downloaded: " + result.getFile().getName());
-                    },
-                    error -> Log.e("MyAmplifyApp", "Download Failure", error)
-            );
-        }
-
-//        String img= intent.getExtras().getString("img");
-////                if (intent.getExtras().getString("img") != null) {
-//                    Amplify.Storage.downloadFile(
-//                            "image",
-//                            new File(getApplicationContext().getFilesDir() + "/download.jpg"),
-//                            result -> {
-//                                ImageView image = findViewById(R.id.imageViewImage);
-//                                intent.getExtras().getString("img");
-//                                image.setImageBitmap(BitmapFactory.decodeFile(result.getFile().getPath()));
-//
-//                                Log.i("MyAmplifyApp", "Successfully downloaded: " + result.getFile());
-//                            },
-//                            error -> Log.e("MyAmplifyApp", "Download Failure", error)
-//                    );
-////                }
-
+        String url = intent.getExtras().getString("img");
+        Log.i("url", "onCreate: "+ url);
+        ImageView image = findViewById(R.id.imageViewImage);
+        Picasso.get().load(url).into(image);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
 
