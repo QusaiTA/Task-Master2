@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -42,6 +43,8 @@ public class AddTask extends AppCompatActivity {
 
     String img = "";
     public Uri imgLink;
+    String imageKey = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,20 @@ public class AddTask extends AppCompatActivity {
             fileChoose();
             uploadInputStream();
         });
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+        ImageView image = findViewById(R.id.NewImageView);
+        if (Intent.ACTION_SEND.equals(action) && type != null) {
+            if (type.startsWith("image/")) {
+                Uri imageUri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
+                if (imageUri != null) {
+                    image.setImageURI(imageUri);
+                    image.setVisibility(View.VISIBLE);
 
+                }
+            }
+        }
         Button button = findViewById(R.id.button3);
         button.setOnClickListener(new View.OnClickListener() {
             int count =1;
@@ -88,7 +104,7 @@ public class AddTask extends AppCompatActivity {
                         .title(taskTitleVal)
                         .body(taskBodyVal)
                         .state(taskStateVal)
-                        .img(imageURl)
+                        .img(imageKey)
                         .build();
 
                 Amplify.API.mutate(
@@ -96,6 +112,8 @@ public class AddTask extends AppCompatActivity {
                         response -> Log.i("MyAmplifyApp", "Added Todo with id: " + response.getData().getId()),
                         error -> Log.e("MyAmplifyApp", "Create failed", error)
                 );
+
+
 
 
             }
