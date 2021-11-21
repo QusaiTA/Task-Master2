@@ -104,7 +104,7 @@ public class AddTask extends AppCompatActivity {
                         .title(taskTitleVal)
                         .body(taskBodyVal)
                         .state(taskStateVal)
-                        .img(imageKey)
+                        .img(imageURl)
                         .build();
 
                 Amplify.API.mutate(
